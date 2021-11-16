@@ -12,7 +12,8 @@ public class MoveLeft : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerController =
+            GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,8 @@ public class MoveLeft : MonoBehaviour
         }
 
         // Destroy obstacles as they go out of bounnds.
-        if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
+        if (transform.position.x < leftBound &&
+            gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
         }
